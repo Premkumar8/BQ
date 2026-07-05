@@ -17,6 +17,11 @@ if database_url:
     # SQLAlchemy requires 'postgresql://' instead of 'postgres://'
     if database_url.startswith("postgres://"):
         database_url = database_url.replace("postgres://", "postgresql://", 1)
+        
+    # Remove Supabase-specific unsupported options that crash psycopg2
+    import re
+    database_url = re.sub(r'[\?&]supa=[^&]*', '', database_url)
+
     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 else:
     basedir = os.path.abspath(os.path.dirname(__name__))
