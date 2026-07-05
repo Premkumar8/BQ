@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ladizo - Premium South Indian Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="/logo.png" alt="Ladizo Logo" class="logo-img" />
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions" style="display: flex; gap: 15px; margin-left: 20px;">
+          <a href="#" id="loginBtn" style="font-size: 1.2rem; cursor: pointer;">👤</a>
+          <a href="#" id="cartBtn" style="font-size: 1.2rem; cursor: pointer; position: relative;">
+            🛒
+            <span id="cartCount" style="position:absolute; top:-8px; right:-10px; background:var(--primary); color:white; border-radius:50%; font-size:10px; padding:2px 6px;">0</span>
+          </a>
+        </div>
+        <div class="mobile-menu-btn">☰</div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero split-hero">
+      <div class="container hero-flex">
+        <div class="hero-content-box">
+          <span class="eyebrow">DESIGNER CLOTHES</span>
+          <div class="divider"></div>
+          <h1>Your New <br/> Everyday Style.</h1>
+          <p>Ladizo is your destination for designer and comfortable traditional clothes for any occasion.</p>
+          <div class="hero-actions">
+            <a href="#collections" class="btn btn-dark">Shop Now +</a>
+            <a href="#about" class="btn btn-outline-dark">About Us</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="carousel-container">
+            <div class="carousel-slide fade">
+              <img src="/hero_full_saree.png" alt="South Indian Silk Saree" />
+            </div>
+            <div class="carousel-slide fade">
+              <img src="/hero_full_lehenga.png" alt="Designer Lehenga" />
+            </div>
+            <div class="carousel-slide fade">
+              <img src="/hero_full_anarkali.png" alt="Royal Anarkali Suit" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+      <div class="container">
+        <h2 class="section-title">Our Exclusive Collections</h2>
+        <p class="section-subtitle">Handpicked styles blending tradition with modern aesthetics.</p>
+        
+        <div class="collection-slider-container">
+          <button class="slider-btn prev-slider">&#10094;</button>
+          <div class="grid collection-slider" id="collectionSlider">
+            <!-- Product cards will be injected here dynamically via JS -->
+          </div>
+          <button class="slider-btn next-slider">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customization" class="customization-section">
+      <div class="customization-flex container">
+        <div class="customization-img">
+          <img src="/customization.png" alt="Bespoke Tailoring" />
+        </div>
+        <div class="customization-content">
+          <span class="eyebrow">CUSTOMIZATION</span>
+          <h2 class="serif-heading">— Want to Order a Very Special Outfit?</h2>
+          <p>We offer bespoke tailoring according to your sketches, as well as working together with our designers.</p>
+          <p>Are your needs beyond our range? We also offer bespoke tailoring and can create an exclusive outfit for you! If you have an idea, we will gladly implement it or work on it together with you.</p>
+          <button id="openQuoteBtn" class="btn btn-outline-dark quote-btn">Request a Quote +</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Happy Customers Marquee -->
+    <section id="testimonials" class="testimonials-section">
+      <h2 class="section-title">Our Happy Customers</h2>
+      <div class="marquee-container">
+        <div class="marquee-track" id="marqueeTrack">
+          <div class="testimonial-card">
+            <h4>Lakshmi N.</h4>
+            <p>"The Kanchipuram saree I bought was stunning! The silk quality is pure perfection."</p>
+          </div>
+          <div class="testimonial-card">
+            <h4>Ananya R.</h4>
+            <p>"I ordered a custom lehenga for my reception and it exceeded all expectations."</p>
+          </div>
+          <div class="testimonial-card">
+            <h4>Priya S.</h4>
+            <p>"The half-saree colors are so vibrant. Will definitely shop here again."</p>
+          </div>
+          <div class="testimonial-card">
+            <h4>Kavya M.</h4>
+            <p>"Excellent customer service and the bespoke tailoring fit me like a glove!"</p>
+          </div>
+          <div class="testimonial-card">
+            <h4>Divya V.</h4>
+            <p>"Ladizo is my go-to for all traditional and boutique wear."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about bg-light">
+      <div class="container about-flex">
+        <div class="about-text">
+          <h2 class="section-title text-left">The Ladizo Legacy</h2>
+          <p>At Ladizo, we celebrate the rich cultural heritage of South India by weaving traditions into modern masterpieces. Every thread tells a story of craftsmanship, dedication, and beauty.</p>
+          <p>From the illustrious looms of Kanchipuram to the vibrant artisan workshops creating stunning lehengas, churidars, and modern boutique dresses, our collections are designed to make you feel extraordinary on your special days.</p>
+        </div>
+        <div class="about-image">
+           <img src="/logo.png" alt="Ladizo Logo" class="about-logo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="history-section container">
+      <div class="history-header">
+        <span class="eyebrow">HISTORY</span>
+        <h2 class="serif-heading">— Moments That Matter for Us.</h2>
+        <p>A few words about how our brand of designer clothes was created and developed.</p>
+      </div>
+      <div class="history-grid">
+        <div class="history-card">
+          <div class="history-circle">1997</div>
+          <h3>Beginning</h3>
+          <div class="short-divider mx-auto"></div>
+          <p>Kavya met Priya, and together they decided to create a fashion brand.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-circle">2001</div>
+          <h3>Featured in Vogue</h3>
+          <div class="short-divider mx-auto"></div>
+          <p>We were featured as the "Editor's Pick for Spring-Summer 2001".</p>
+        </div>
+        <div class="history-card">
+          <div class="history-circle">2019</div>
+          <h3>First Offline Store</h3>
+          <div class="short-divider mx-auto"></div>
+          <p>In 2019, we opened our first boutique on the bustling streets of Chennai.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaborate Banner -->
+    <section id="collaborate" class="collaborate-banner container">
+      <div class="collaborate-content">
+        <div class="envelope-icon">✉</div>
+        <h2 class="serif-heading">Want to Collaborate With Us?</h2>
+        <div class="short-divider"></div>
+        <p>Please contact us to discuss the details with our manager.</p>
+        <button id="openContactBtn" class="btn btn-dark">Contact Us +</button>
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>Ladizo</h3>
+          <p>Premium South Indian Boutique</p>
+          <p>Elevating everyday style.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <a href="#home">Home</a>
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>123 Boutique Street, Chennai</p>
+          <p>Email: hello@ladizo.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" target="_blank" title="Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:24px;"></a>
+            <a href="#" target="_blank" title="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:24px;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ladizo Boutique. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+        <h2 class="serif-heading">Request a Custom Quote</h2>
+        <p>Fill out the form below to collaborate with our designers.</p>
+        <form id="quoteForm" class="quote-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="tel" placeholder="Your Phone Number" required />
+          <textarea placeholder="Describe your outfit idea..." rows="4" required></textarea>
+          <button type="submit" class="btn btn-dark">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="closeContactBtn" class="close-btn">&times;</button>
+        <h2 class="serif-heading">Contact Us</h2>
+        <p>Fill out the form below and our manager will get in touch with you.</p>
+        <form id="contactForm" class="quote-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="tel" placeholder="Your Phone Number" required />
+          <textarea placeholder="How can we help you?" rows="4" required></textarea>
+          <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+    
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+      <div class="modal-content auth-content">
+        <span class="close-btn auth-close">&times;</span>
+        <h2>Login / Register</h2>
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="email">Email</button>
+          <button class="auth-tab" data-tab="phone">Phone</button>
+        </div>
+        <form id="authForm">
+          <div id="emailInput" class="auth-input-group">
+            <input type="email" id="authEmail" placeholder="Email Address">
+          </div>
+          <div id="phoneInput" class="auth-input-group" style="display:none;">
+            <input type="tel" id="authPhone" placeholder="Phone Number">
+          </div>
+          <div class="auth-input-group">
+            <input type="password" id="authPassword" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-submit" id="authSubmitBtn">Login / Register</button>
+        </form>
+        <div class="auth-divider"><span>OR</span></div>
+        <button class="btn btn-google" id="googleAuthBtn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="G"> Continue with Google
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2>Your Cart</h2>
+        <span class="close-btn cart-close">&times;</span>
+      </div>
+      <div class="sidebar-content" id="cartItems">
+        <p class="empty-cart-msg">Please login to view your cart.</p>
+      </div>
+      <div class="sidebar-footer">
+        <button class="btn btn-checkout">Checkout</button>
+      </div>
+    </div>
+  </body>
+</html>
