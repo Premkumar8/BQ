@@ -258,7 +258,7 @@ cartClose?.addEventListener('click', () => cartSidebar?.classList.remove('active
 
 window.addEventListener('click', (e) => {
   if (e.target === authModal) {
-    authModal.classList.remove('active');
+    authModal?.classList.remove('active');
   }
 });
 
