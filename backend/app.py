@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from models import db, Product, User, CartItem
-import os
+
 import jwt
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
