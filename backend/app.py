@@ -12,7 +12,7 @@ CORS(app) # Enable CORS for frontend requests
 
 # Configure Database
 # For local dev, use ladizo.db SQLite file. For Vercel/Production, use PostgreSQL via DATABASE_URL
-database_url = os.getenv('DATABASE_URL')
+database_url = os.getenv('DATABASE_URL') or os.getenv('POSTGRES_URL')
 if database_url:
     # SQLAlchemy requires 'postgresql://' instead of 'postgres://'
     if database_url.startswith("postgres://"):
