@@ -21,5 +21,8 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "env": {
+    "POSTGRES_URL": "postgres://postgres.zbsiylyffyninymivyrc:VSUXpK9NMBgs0DZ6@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
+  }
 }
